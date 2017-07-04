@@ -40,11 +40,14 @@ captures/
 .idea/dictionaries
 .idea/libraries
 .idea/misc.xml
+<<<<<<< HEAD
 .idea/compiler.xml
 .idea/modules.xml
 .idea/runConfigurations.xml
 .idea/vcs.xml
 
+=======
+>>>>>>> 0c00a507b97cdf50e41f4fc04d690dd37c1849b6
 
 # Keystore files
 *.jks
