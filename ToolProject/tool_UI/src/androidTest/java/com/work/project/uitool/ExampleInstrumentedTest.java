@@ -1,4 +1,4 @@
-package com.work.project.toolproject;
+package com.work.project.uitool;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.work.project.toolproject", appContext.getPackageName());
+        assertEquals("com.work.project.uitool", appContext.getPackageName());
     }
 }

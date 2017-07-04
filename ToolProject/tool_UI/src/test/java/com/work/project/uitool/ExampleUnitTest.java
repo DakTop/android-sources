@@ -1,4 +1,4 @@
-package com.work.project.toolproject;
+package com.work.project.uitool;
 
 import org.junit.Test;
 
