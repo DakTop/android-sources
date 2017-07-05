@@ -5,11 +5,11 @@ import android.os.Bundle;
 
 /**
  * 定制ViewGroup
+ *
  * @author bazengliang
  * @date 2017-7-4
  */
 public class MainActivity extends BaseActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
