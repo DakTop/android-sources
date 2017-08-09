@@ -1,1 +1,1 @@
-include ':tool_UI', ':tool_LoginInterceptor'
+include ':tool_UI', ':tool_LoginInterceptor', ':tool_logstatistics'
