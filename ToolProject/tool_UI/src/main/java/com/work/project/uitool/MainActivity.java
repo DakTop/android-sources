@@ -4,7 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 /**
- * 打造一系列自定义View
+ * 打造自定义View
  */
 public class MainActivity extends AppCompatActivity {
 
