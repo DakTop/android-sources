@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.work.project.uitool.viewdraghelper.layout.SideslipLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:text="这里是主菜单内容"
+        android:textColor="@color/color_ffffff"
+        android:textSize="24dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:text="这里是主内容"
+        android:textColor="@color/color_ffffff"
+        android:textSize="24dp" />
+</com.work.project.uitool.viewdraghelper.layout.SideslipLayout>

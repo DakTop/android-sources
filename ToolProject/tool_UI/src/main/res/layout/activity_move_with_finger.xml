@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.work.project.uitool.viewdraghelper.layout.MoveWithFingerLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark">
+
+        <TextView
+            android:id="@+id/tvOne"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:text="view one"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/tvTwo"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="view two"
+            android:textSize="20dp" />
+    </com.work.project.uitool.viewdraghelper.layout.MoveWithFingerLayout>
+</FrameLayout>
