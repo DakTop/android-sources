@@ -99,7 +99,7 @@ public class MultipleThreadDownloadActivity extends AppCompatActivity {
                     Bundle b = new Bundle();
                     b.putString("singprogress", progressSingleDown);
                     message.setData(b);
-                    handler.sendEmptyMessage(1);
+                    handler.sendMessage(message);
                 }
                 outputStream.flush();
                 inputStream.close();

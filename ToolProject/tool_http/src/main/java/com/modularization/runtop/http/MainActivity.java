@@ -66,4 +66,13 @@ public class MainActivity extends AppCompatActivity {
     public void onDownloadFile(View view) {
         startActivity(new Intent(this, MultipleThreadDownloadActivity.class));
     }
+
+    /**
+     * 断点续传
+     *
+     * @param view
+     */
+    public void onDownloadFromBreak(View view) {
+        startActivity(new Intent(this, DownloadFromBreakActivity.class));
+    }
 }
