@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">aidl_client</string>
+    <string name="title_activity_connection_service">ConnectionServiceActivity</string>
+</resources>
