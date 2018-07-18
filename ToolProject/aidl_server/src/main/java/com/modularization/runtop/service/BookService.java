@@ -3,7 +3,10 @@ package com.modularization.runtop.service;
 import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
+import android.os.Looper;
 import android.os.RemoteException;
+import android.util.Log;
+import android.widget.Toast;
 
 import com.interfaces.IBookInterface;
 import com.model.Book;
@@ -33,17 +36,26 @@ public class BookService extends Service {
 
         @Override
         public Book inBook(Book book) throws RemoteException {
-            return null;
+            bookList.add(book);
+            book.setName("inBook修改书名称");
+            Log.i("in添加一本书", book.getId() + "，" + book.getName());
+            return book;
         }
 
         @Override
         public Book outBook(Book book) throws RemoteException {
-            return null;
+            bookList.add(book);
+            book.setName("outBook修改书名称");
+            Log.i("out添加一本书", book.getId() + "，" + book.getName());
+            return book;
         }
 
         @Override
         public Book inoutBook(Book book) throws RemoteException {
-            return null;
+            bookList.add(book);
+            book.setName("inoutBook修改书名称");
+            Log.i("inout添加一本书", book.getId() + "，" + book.getName());
+            return book;
         }
     };
 

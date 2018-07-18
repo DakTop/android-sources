@@ -1,4 +1,4 @@
-// IBookInterface.aidl
+//包括aidl的基础使用，in,out，inout定向tag的使用，也可以看做是客户端与服务端通信
 package com.interfaces;
 //使用aidl非默认的数据类型，必须引入相应实体类的包名。
 import com.model.Book;

@@ -20,12 +20,13 @@
         <service
             android:name="com.modularization.runtop.service.BookService"
             android:enabled="true"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="com.modularization.runtop.service.BookService"></action>
-                <category android:name="android.intent.category.DEFAULT"></category>
-            </intent-filter>
-        </service>
+            android:exported="true" />
+        <service
+            android:name="com.modularization.runtop.service.DataUpdateListenerService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name="com.modularization.runtop.activity.UpdateDataActivity"></activity>
     </application>
 
 </manifest>
