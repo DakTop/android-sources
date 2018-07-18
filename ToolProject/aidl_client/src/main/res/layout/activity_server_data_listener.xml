@@ -9,13 +9,12 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="toConnectionService"
-        android:text="跨进程连接" />
+        android:onClick="connectService"
+        android:text="连接服务" />
 
-    <Button
+    <LinearLayout
+        android:id="@+id/ll_books"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="toDataListenService"
-        android:text="监听远程进程数据变化" />
-
+        android:orientation="vertical"/>
 </LinearLayout>

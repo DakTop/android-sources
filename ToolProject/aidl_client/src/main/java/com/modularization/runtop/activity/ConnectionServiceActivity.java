@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.os.RemoteException;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -53,8 +54,7 @@ public class ConnectionServiceActivity extends AppCompatActivity {
      */
     public void connectService(View v) {
         Intent intent = new Intent();
-        intent.setAction("com.modularization.runtop.service.BookService");
-        intent.setPackage("com.modularization.runtop.aidl.server");
+        intent.setClassName("com.modularization.runtop.aidl.server", "com.modularization.runtop.service.BookService");
         bindService(intent, serviceConnection, Context.BIND_AUTO_CREATE);
     }
 
@@ -74,27 +74,51 @@ public class ConnectionServiceActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * 服务端会收到这个b对象，也会解析对象的信息到服务端，但是当服务端收到这个对象后，修改任何属性的话，
+     * 这里的b对象还是原来的信息，不会做出任何修改。
+     *
+     * @param v
+     */
     public void inBook(View v) {
-        Book b = new Book(1, "新书");
+        Book b = new Book(1, "in新书");
         try {
             binder.inBook(b);
+            Log.i("in添加一本书", b.getId() + "，" + b.getName());
         } catch (RemoteException e) {
             e.printStackTrace();
         }
     }
 
+    /**
+     * 服务端会收到这个b对象，但是不会解析这个对象，会新建一个对象，然后会将新建的对象信息
+     * 返回到客户端。
+     *
+     * @param v
+     */
     public void outBook(View v) {
-        Intent intent = new Intent();
-        intent.setAction("com.modularization.runtop.service.BookService");
-        intent.setPackage("com.modularization.runtop.aidl.server");
-        bindService(intent, serviceConnection, Context.BIND_AUTO_CREATE);
+        Book b = new Book(2, "out新书");
+        try {
+            binder.outBook(b);
+            Log.i("out添加一本书", b.getId() + "，" + b.getName());
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
     }
 
+    /**
+     * 服务端会收到这个b对象，也会解析这个对象的信息到服务端，如果服务端修改对象的任何属性这里的b对象也会被修改。
+     *
+     * @param v
+     */
     public void inoutBook(View v) {
-        Intent intent = new Intent();
-        intent.setAction("com.modularization.runtop.service.BookService");
-        intent.setPackage("com.modularization.runtop.aidl.server");
-        bindService(intent, serviceConnection, Context.BIND_AUTO_CREATE);
+        Book b = new Book(3, "inout新书");
+        try {
+            binder.inoutBook(b);
+            Log.i("inout添加一本书", b.getId() + "，" + b.getName());
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
     }
 
     public void addNewItemView(Book book) {

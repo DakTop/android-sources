@@ -23,4 +23,13 @@ public class MainActivity extends AppCompatActivity {
     public void toConnectionService(View v) {
         startActivity(new Intent(this, ConnectionServiceActivity.class));
     }
+
+    /**
+     * 客户端监听服务端数据变化
+     *
+     * @param v
+     */
+    public void toDataListenService(View v) {
+        startActivity(new Intent(this, ServerDataListenerActivity.class));
+    }
 }
