@@ -32,4 +32,13 @@ public class MainActivity extends AppCompatActivity {
     public void toDataListenService(View v) {
         startActivity(new Intent(this, ServerDataListenerActivity.class));
     }
+
+    /**
+     * 服务端死亡重连机制
+     *
+     * @param v
+     */
+    public void toReconnentService(View v) {
+        startActivity(new Intent(this, ReconnectActivity.class));
+    }
 }

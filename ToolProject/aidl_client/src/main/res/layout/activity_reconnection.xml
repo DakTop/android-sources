@@ -9,19 +9,13 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="toConnectionService"
-        android:text="跨进程连接" />
+        android:onClick="connectServer"
+        android:text="连接服务" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="toDataListenService"
-        android:text="监听远程进程数据变化" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="toReconnentService"
-        android:text="死亡重连机制" />
+        android:onClick="setDeathRecipient"
+        android:text="设置死亡代理" />
 
 </LinearLayout>

@@ -20,7 +20,8 @@
             android:name="com.modularization.runtop.activity.ConnectionServiceActivity"
             android:label="@string/title_activity_connection_service"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name="com.modularization.runtop.activity.ServerDataListenerActivity"></activity>
+        <activity android:name="com.modularization.runtop.activity.ServerDataListenerActivity" />
+        <activity android:name="com.modularization.runtop.activity.ReconnectActivity"></activity>
     </application>
 
 </manifest>
