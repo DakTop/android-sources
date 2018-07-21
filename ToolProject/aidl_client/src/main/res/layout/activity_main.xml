@@ -16,12 +16,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="toDataListenService"
-        android:text="监听远程进程数据变化" />
+        android:text="监听服务端数据变化" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="toReconnentService"
         android:text="死亡重连机制" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="toAuthenticationService"
+        android:text="服务端身份验证机制" />
 
 </LinearLayout>

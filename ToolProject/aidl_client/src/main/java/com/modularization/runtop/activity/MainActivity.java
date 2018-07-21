@@ -41,4 +41,13 @@ public class MainActivity extends AppCompatActivity {
     public void toReconnentService(View v) {
         startActivity(new Intent(this, ReconnectActivity.class));
     }
+
+    /**
+     * 服务端身份验证
+     *
+     * @param v
+     */
+    public void toAuthenticationService(View v) {
+        startActivity(new Intent(this, AuthenticationActivity.class));
+    }
 }
