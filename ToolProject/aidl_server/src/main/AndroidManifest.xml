@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.modularization.runtop.aidl.server">
 
+    <permission
+        android:name="com.modularization.runtop.aidl.server.CLIENT_CONNENTION_AUTHORITY"
+        android:protectionLevel="normal" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -26,7 +30,19 @@
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name="com.modularization.runtop.activity.UpdateDataActivity"></activity>
+        <activity android:name="com.modularization.runtop.activity.UpdateDataActivity" />
+
+        <!-- android:permission 这个属性表示当远程客户端连接服务时，需要在远程客户端的AndroidManifest文件中使用 <uses-permission/>标签配置这个权限，否则不能访问这个服务
+        另外，服务端（也就是当前进程中）其他组件访问这个服务不需要在AndroidManifest文件中配置这个权限也能访问这个服务-->
+        <service
+            android:name="com.modularization.runtop.service.AuthenticationService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="com.modularization.runtop.aidl.server.CLIENT_CONNENTION_AUTHORITY" >
+            <intent-filter>
+                <action android:name="com.connection.action.server"></action>
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>
